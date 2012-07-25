@@ -26,6 +26,7 @@ register_nav_menu('custom_menu', __('Custom Menu'));
 }
 add_action('init', 'register_custom_menu');
 add_theme_support( 'menus' );
+add_theme_support( 'post-thumbnails' );
 
 //Custom Background
 add_custom_background();
