@@ -7,16 +7,8 @@
 			<div class="dpsc_product_main_container">
 				<div class="dpsc_image_container">
 					<div class="dpsc_image_section">
-						<!--						<div class="dpsc_image_tab">-->
-						<!--							<ul class="dpsc_tabs">-->
-						<!--								<li><a class="dpsc_thumb_tab fancybox current" id="95" rel="imgGroup"-->
-						<!--									   href="http://madoido.com/begi/wp-content/uploads/2010/08/Double-Vessel.jpg"><img-->
-						<!--										src="http://madoido.com/begi/wp-content/plugins/dukapress/lib/timthumb.php?src=http://madoido.com/begi/wp-content/uploads/2010/08/Double-Vessel.jpg&amp;w=50&amp;h=63&amp;zc=1"></a>-->
-						<!--								</li>-->
-						<!--							</ul>-->
-						<!--						</div>-->
 						<div class="dpsc_main_image main_95">
-							<?php get_image_from_catalog_item($post, 250)?>
+							<?php get_image_from_catalog_item($post, 275)?>
 						</div>
 					</div>
 				</div>
