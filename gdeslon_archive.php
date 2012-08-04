@@ -15,8 +15,6 @@
 							<?php the_title() ?>
 						</a>
 					</p>
-					<!--					<p class="detail">-->
-					<?php //echo html_entity_decode(nl2br(get_the_content())); ?><!--</p>-->
 					<p class="price"><?php echo get_post_meta($post->ID, 'price', TRUE); ?> <?php echo (get_post_meta($post->ID, 'currency', TRUE) == 'RUR' ? 'руб.' : get_post_meta($post->ID, 'currency', TRUE)); ?></p>
 				</div>
 			</div>

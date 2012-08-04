@@ -1,4 +1,8 @@
 <?php
+require_once 'libs/control.php';
+require_once 'libs/meta.php';
+require_once 'libs/widget.php';
+
 //Register Sidebar
 if (function_exists('register_sidebars'))
 	register_sidebar(array('name' => 'Sidebar',
@@ -31,4 +35,18 @@ add_action('init', 'register_custom_menu');
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
 add_theme_support( 'automatic-feed-links' );
-?>
+
+$meta = new Fruitframe_AddMetaBox();
+$meta->create('params', array(
+	'show-on-main'	=> array(
+		'label'   => 'Показывать на главной',
+		'type'    => 'checkbox',
+		'default' => 0
+	),
+	'is_featured'	=> array(
+		'label'   => 'Избранный товар',
+		'type'    => 'checkbox',
+		'default' => 0
+	),
+), 'ps_catalog', 'Опции товара');
+

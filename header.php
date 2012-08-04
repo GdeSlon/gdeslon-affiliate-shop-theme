@@ -11,7 +11,7 @@
 	<title><?php wp_title(''); ?><?php if (wp_title('', false)) {
 		echo ' :';
 	} ?> <?php bloginfo('name'); ?></title>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" type="text/css" media="screen"/>
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png"/>
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed"
 		  href="<?php bloginfo('rss2_url'); ?>"/>
