@@ -15,7 +15,8 @@
 							<?php the_title() ?>
 						</a>
 					</p>
-<!--					<p class="detail">--><?php //echo html_entity_decode(nl2br(get_the_content())); ?><!--</p>-->
+					<!--					<p class="detail">-->
+					<?php //echo html_entity_decode(nl2br(get_the_content())); ?><!--</p>-->
 					<p class="price"><?php echo get_post_meta($post->ID, 'price', TRUE); ?> <?php echo (get_post_meta($post->ID, 'currency', TRUE) == 'RUR' ? 'руб.' : get_post_meta($post->ID, 'currency', TRUE)); ?></p>
 				</div>
 			</div>
@@ -23,11 +24,11 @@
 			<p>Товаров нет</p>
 			<?php endif; ?>
 			<div class="clear" style="height: 30px;"></div>
-			<div class="dpsc_grid_pagination"><?php posts_nav_link(' &#8212; ', __('&laquo; Предыдущая страница'), __('Следующая страница &raquo;')); ?></div>
+			<div class="dpsc_grid_pagination"><?php posts_nav_link(' &#8212; ', '&laquo; Предыдущая страница', 'Следующая страница &raquo;'); ?></div>
 			<div class="clear"></div>
 		</div>
 	</div>
-	<?php include(TEMPLATEPATH."/sidebar.php");?>
+	<?php include(TEMPLATEPATH . "/sidebar.php");?>
 </div>
 <!-- The main column ends  -->
 <?php get_footer(); ?>

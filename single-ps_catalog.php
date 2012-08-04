@@ -4,6 +4,7 @@
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="postarea">
 			<h1><?php the_title()?></h1>
+
 			<div class="dpsc_product_main_container">
 				<div class="dpsc_image_container">
 					<div class="dpsc_image_section">
@@ -13,16 +14,21 @@
 					</div>
 				</div>
 				<div class="dpsc_content_container">
-					<p class="dpsc_price">Цена: <strong id="dpsc_new_product_price_95"><?php echo get_post_meta($post->ID, 'price', TRUE); ?></strong> <?php echo (get_post_meta($post->ID, 'currency', TRUE) == 'RUR' ? 'руб.' : get_post_meta($post->ID, 'currency', TRUE)); ?></p>
+					<p class="dpsc_price">Цена: <strong
+							id="dpsc_new_product_price_95"><?php echo get_post_meta($post->ID, 'price', TRUE); ?></strong> <?php echo (get_post_meta($post->ID, 'currency', TRUE) == 'RUR' ? 'руб.' : get_post_meta($post->ID, 'currency', TRUE)); ?>
+					</p>
 					<?php if (get_post_meta($post->ID, 'vendor', TRUE)): ?>
-					<p class="dpsc_price">Производитель: <strong><?php echo get_post_meta($post->ID, 'vendor', TRUE)?></strong></p>
+					<p class="dpsc_price">Производитель:
+						<strong><?php echo get_post_meta($post->ID, 'vendor', TRUE)?></strong></p>
 					<?php endif?>
 					<?php if (get_post_meta($post->ID, 'params_list', TRUE)): ?>
 					<?php foreach (explode(',', get_post_meta($post->ID, 'params_list', TRUE)) as $paramKey): ?>
-						<p class="dpsc_price"><?php echo $paramKey?>: <strong><?php echo get_post_meta($post->ID, $paramKey, TRUE)?></strong></p><tr>
+						<p class="dpsc_price"><?php echo $paramKey?>:
+							<strong><?php echo get_post_meta($post->ID, $paramKey, TRUE)?></strong></p><tr>
 						<?php endforeach ?>
 					<?php endif?>
-					<a href="<?php echo GS_PLUGIN_URL?>go.php?url=<?php echo get_post_meta($post->ID, 'url', TRUE); ?>" target="_blank" class="dpsc_submit_button">
+					<a href="<?php echo GS_PLUGIN_URL?>go.php?url=<?php echo get_post_meta($post->ID, 'url', TRUE); ?>"
+					   target="_blank" class="dpsc_submit_button">
 						Купить
 					</a>
 
@@ -62,7 +68,8 @@
 			<?php foreach (get_posts($args) as $relatedItem): ?>
 			<div class="dpsc_grid_product">
 				<div class="dpsc_grid_product_image">
-					<a href="<?php echo get_permalink($relatedItem->ID)?>" title="<?php echo $relatedItem->post_title; ?>" style="display: block;">
+					<a href="<?php echo get_permalink($relatedItem->ID)?>"
+					   title="<?php echo $relatedItem->post_title; ?>" style="display: block;">
 						<?php get_image_from_catalog_item($relatedItem->ID, 120)?>
 					</a>
 				</div>
@@ -72,7 +79,8 @@
 							<?php echo $relatedItem->post_title; ?>
 						</a>
 					</p>
-					<!--					<p class="detail">--><?php //echo html_entity_decode(nl2br(get_the_content())); ?><!--</p>-->
+					<!--					<p class="detail">-->
+					<?php //echo html_entity_decode(nl2br(get_the_content())); ?><!--</p>-->
 					<p class="price"><?php echo get_post_meta($relatedItem->ID, 'price', TRUE); ?> <?php echo (get_post_meta($relatedItem->ID, 'currency', TRUE) == 'RUR' ? 'руб.' : get_post_meta($relatedItem->ID, 'currency', TRUE)); ?></p>
 				</div>
 			</div>

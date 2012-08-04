@@ -1,14 +1,16 @@
 /* 
-	Theme Name: Begi
-	Theme URL: http://www.dukapress.com
-	Description: Begi is a clean and minimalist shopping cart theme made for DukaPress based on <a href="https://github.com/bearwithclaws/vanillacart">Vanilla cart</a>. 
-	Author: DukaPress.com
-	Author URI: http://www.dukapress.com
+	Theme Name: GdeSlon Begi Affiliate Shop
+	Theme URL: http://www.gdeslon.ru
+	Description:GdeSlon Begi Affiliate Shop is clean and simple theme for affiliate shop, created to work with <a href="http://wordpress.org/extend/plugins/gdeslon-affiliate-shop/">GdeSlon Affiliate Shop plugin</a> based on <a href="http://dukapress.com/blog/2011/02/05/begi-wordpress-e-commerce-theme/">Begi theme</a>.
+	Author: GdeSlon.ru
+	Author URI: http://www.gdeslon.ru
 	Version: 0.7
 	Tags: two-columns, right-sidebar, fixed-width, white, threaded-comments, sticky-post,theme-options
-	
+
 	The CSS, XHTML and design is released under GPL:
-	http://www.opensource.org/licenses/gpl-license.php	
+	http://www.opensource.org/licenses/gpl-license.php
+	License: GPL
+	License URI: http://www.opensource.org/licenses/gpl-license.php
 	
 */
 
@@ -326,10 +328,12 @@ a:focus, a:hover, a:active
 	color: #999;
 	/*text-decoration: underline*/
 }
+
 .dpsc_grid_pagination
 {
 	text-align: center;
 }
+
 /************************************************
 *	Content 					     		    *
 ************************************************/
@@ -1764,6 +1768,19 @@ table.shoppingcart td
 .dpsc_in_stock_sold_out
 {
 	display: none;
+}
+
+/**
+ * Соблюдаем стандарты WordPress.org
+ **/
+.gallery-caption
+{
+
+}
+
+.bypostauthor
+{
+
 }
 
 /**end basic DukaPress Styling**/

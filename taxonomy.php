@@ -1,1 +1,1 @@
-<?php get_template_part('gdeslon_archive')?>
+<?php get_template_part('gdeslon_archive') ?>
