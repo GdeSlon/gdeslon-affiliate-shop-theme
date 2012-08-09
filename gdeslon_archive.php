@@ -22,7 +22,7 @@
 			<p>Товаров нет</p>
 			<?php endif; ?>
 			<div class="clear" style="height: 30px;"></div>
-			<div class="dpsc_grid_pagination"><?php posts_nav_link(' &#8212; ', '&laquo; Предыдущая страница', 'Следующая страница &raquo;'); ?></div>
+			<div class="dpsc_grid_pagination"><?php get_template_part('_pagination')?></div>
 			<div class="clear"></div>
 		</div>
 	</div>
