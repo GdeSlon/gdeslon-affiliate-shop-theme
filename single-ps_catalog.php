@@ -90,7 +90,7 @@
 	<?php include(TEMPLATEPATH . "/sidebar.php"); ?>
 </div>
 <!-- The main column ends  -->
-<?php get_footer(); ?>
+<?php get_footer(); /*?>
 
 
 <table class="product-table">
