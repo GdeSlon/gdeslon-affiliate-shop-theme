@@ -4,7 +4,6 @@
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="postarea">
 			<h1><?php the_title()?></h1>
-
 			<div class="dpsc_product_main_container">
 				<div class="dpsc_image_container">
 					<div class="dpsc_image_section">
@@ -31,11 +30,16 @@
 					   target="_blank" class="dpsc_submit_button">
 						Купить
 					</a>
-
 				</div>
 			</div>
 			<div class="clear"></div>
-			<!--			--><?php //the_content()?>
+			<?php
+			/**
+			 * Выводим описание товара, убираем фильтр, который ломает отображение. Декодируем преобразованные html-тэги
+			 */
+			remove_filter('the_content', 'showPost', 999999);
+			echo html_entity_decode(get_the_content());
+			?>
 			<div style="clear:both;"></div>
 		</div>
 		<?php endwhile; endif; ?>
