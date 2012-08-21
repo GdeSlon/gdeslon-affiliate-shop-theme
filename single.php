@@ -33,7 +33,7 @@
 		<?php endwhile; else: ?>
 		<p>Содержимое не найдено</p><?php endif; ?>
 	</div>
-	<?php include(TEMPLATEPATH . "/sidebar.php");?>
+	<?php get_sidebar()?>
 </div>
 <!-- The main column ends  -->
 <?php get_footer(); ?>

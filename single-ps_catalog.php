@@ -83,87 +83,13 @@
 							<?php echo $relatedItem->post_title; ?>
 						</a>
 					</p>
-					<!--					<p class="detail">-->
-					<?php //echo html_entity_decode(nl2br(get_the_content())); ?><!--</p>-->
 					<p class="price"><?php echo get_post_meta($relatedItem->ID, 'price', TRUE); ?> <?php echo (get_post_meta($relatedItem->ID, 'currency', TRUE) == 'RUR' ? 'руб.' : get_post_meta($relatedItem->ID, 'currency', TRUE)); ?></p>
 				</div>
 			</div>
 			<?php endforeach?>
 		</div>
 	</div>
-	<?php include(TEMPLATEPATH . "/sidebar.php"); ?>
+	<?php get_sidebar();?>
 </div>
 <!-- The main column ends  -->
-<?php get_footer(); /*?>
-
-
-<table class="product-table">
-	<tr>
-		<td style="vertical-align: top;" class="product-image">
-			<?php if (!is_single()): ?>
-			<a href="<?php echo get_permalink($relatedItem->ID) ?>" title="<?php echo $relatedItem->post_title; ?>"
-			   style="display: block;">
-			<?php endif?>
-			<?php get_image_from_catalog_item($relatedItem)?>
-			<?php if (!is_single()): ?>
-			</a>
-			<?php endif?>
-			<p class="products-price"><?php echo get_post_meta($post->ID, 'price', TRUE); ?> <?php echo (get_post_meta($post->ID, 'currency', TRUE) == 'RUR' ? 'руб.' : get_post_meta($post->ID, 'currency', TRUE)); ?></p>
-		</td>
-		<td>&nbsp;</td>
-		<td style="vertical-align: top;">
-			<div class="products-description">
-				<p><?php echo html_entity_decode(nl2br($content)); ?></p>
-				<table>
-
-				</table>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td>
-
-		</td>
-		<td>
-		</td>
-		<td>
-
-			<?php if (!is_single()): ?>
-			<a href="<?php echo get_permalink($relatedItem->ID) ?>" title="<?php echo $relatedItem->post_title; ?>"
-			   style="display: block;">
-				<img src="<?php echo GS_PLUGIN_URL?>img/details.png" alt="Подробнее"/>
-			</a>
-			<?php endif?>
-		</td>
-	</tr>
-</table>
-<?php if (is_single()): ?>
-
-
-<?php
-	$products = $wpdb->get_results("SELECT * FROM ps_products WHERE status = 1 AND bestseller = 1 ORDER BY RAND() LIMIT " . GS_Config::init()->get('ps_row_limit'));
-	?>
-<?php if (!empty($products)) { ?>
-	<h3>Бестселлеры</h3>
-	<table class="products-list">
-		<tr>
-			<?php foreach ($products as $item) {
-			$relatedItem = getPostByItem($item) ?>
-			<td style="text-align: left;">
-				<div class="products-image"><a href="<?php echo get_permalink($relatedItem->ID)?>"
-											   title="<?php echo $relatedItem->post_title; ?>"><?php echo get_image_from_catalog_item($relatedItem, 100)?></a>
-				</div>
-				<p class="products-name"><?php echo $relatedItem->post_title; ?></p>
-
-				<p class="products-price"><?php echo get_post_meta($relatedItem->ID, 'price', TRUE); ?> <?php echo (get_post_meta($relatedItem->ID, 'currency', TRUE) == 'RUR' ? 'руб.' : get_post_meta($relatedItem->ID, 'currency', TRUE)); ?></p>
-
-				<p class="products-details"><a href="<?php echo get_permalink($relatedItem->ID) ?>"
-											   title="<?php echo $relatedItem->post_title; ?>"><img
-						src="<?php echo GS_PLUGIN_URL?>img/details.png" alt="Подробнее"/></a></p>
-			</td>
-			<?php } ?>
-		</tr>
-	</table>
-	<?php } ?>
-<?php endif; ?>
-<?php endif ?>
+<?php get_footer()?>

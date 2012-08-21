@@ -18,7 +18,7 @@
 
 	</div>
 
-	<?php include(TEMPLATEPATH . "/sidebar.php");?>
+	<?php get_sidebar()?>
 
 </div>
 
